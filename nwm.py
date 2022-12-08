@@ -108,20 +108,20 @@ ataki =[
 def los():
     co = randint(1,7)
     if co == 1:
-        przeciwnik = wilk.copy()
+        pp = wilk.copy()
     elif co == 2:
-        przeciwnik = gnom.copy()
+        pp = gnom.copy()
     elif co == 3:
-        przeciwnik = troll.copy()
+        pp = troll.copy()
     elif co == 4:
-        przeciwnik = golem.copy()
+        pp = golem.copy()
     elif co == 7:
-        przeciwnik = smok.copy()
+        pp = smok.copy()
     elif co == 5:
-        przeciwnik = assain.copy()
+        pp = assain.copy()
     elif co == 6:
-        przeciwnik = wojownik
-    return przeciwnik
+        pp = wojownik.copy()
+    return pp
 
 def wa():
     print(ataki)
