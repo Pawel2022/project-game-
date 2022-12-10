@@ -1,4 +1,5 @@
 from random import randint
+import sys
 
 Namew = "wilkiem"
 hp_wilk = 5
@@ -120,7 +121,7 @@ def los():
     elif co == 5:
         pp = assain.copy()
     elif co == 6:
-        pp = wojownik.copy()
+        pp = wojownik
     return pp
 
 def wa():
@@ -174,35 +175,61 @@ def nagroda():
     6 = sopel
     7 = fire ball
     """))
-    if dw == 1:
-        miecz = "miecz"
-        new_dictionary["4 = "] = miecz if miecz else "No data"
-    elif dw == 2:
-        topór = "topór"
-        new_dictionary["5 = "] = topór if topór else "No data"
-    elif dw == 3:
-        buława = "buława"
-        new_dictionary["6 = "] = buława if buława else "No data"
-    elif dw == 4:
-        wielkimiecz = "wielki miecz"
-        new_dictionary["7 = "] = wielkimiecz if wielkimiecz else "No data"
-    elif dw == 5:
-        wielkitopór = "wielki topór"
-        new_dictionary["8 = "] = wielkitopór if wielkitopór else "No data"
-    elif dw == 6:
-        sopel = "sopel"
-        new_dictionary["9 = "] = sopel if sopel else "No data"
-    elif dw == 7:
-        fireball = "fire ball"
-        new_dictionary["10 = "] = fireball if fireball else "No data"
-
-    ataki.append(new_dictionary)   
+    while True:
+        if dw == 1:
+            miecz = "miecz"
+            new_dictionary["4 = "] = miecz if miecz else "No data"
+            ataki.append(new_dictionary)
+            break
+        elif dw == 2:
+            topór = "topór"
+            new_dictionary["5 = "] = topór if topór else "No data"
+            ataki.append(new_dictionary)
+            break
+        elif dw == 3:
+            buława = "buława"
+            new_dictionary["6 = "] = buława if buława else "No data"
+            ataki.append(new_dictionary)
+            break
+        elif dw == 4:
+            wielkimiecz = "wielki miecz"
+            new_dictionary["7 = "] = wielkimiecz if wielkimiecz else "No data"
+            ataki.append(new_dictionary)
+            break
+        elif dw == 5:
+            wielkitopór = "wielki topór"
+            new_dictionary["8 = "] = wielkitopór if wielkitopór else "No data"
+            ataki.append(new_dictionary)
+            break
+        elif dw == 6:
+            sopel = "sopel"
+            new_dictionary["9 = "] = sopel if sopel else "No data"
+            ataki.append(new_dictionary)
+            break
+        elif dw == 7:
+            fireball = "fire ball"
+            new_dictionary["10 = "] = fireball if fireball else "No data"
+            ataki.append(new_dictionary)
+            break
+        else:
+            print("Brak proni pod danym numerem. Spróbuj ponownie.")
+            return 0   
     
 hp = 100
 mana = 100
 name = input("Podaj swoje imie:")
 print(F"Witaj {name}! Twoim zadaniem będzie zyskanie chwały.Good luck!")
-
+ataki =[
+    {
+"1 = atak w ręcz"
+    },
+    {
+"2 = atak nożem",
+    },
+    {
+"3 = iskry",
+    },
+]
 wynik = 0
 while hp > 0:
     przeciwnik = los()
@@ -223,3 +250,4 @@ while hp > 0:
 else:
     print("Zgineło ci się!")
 print(f"Pokonałeś {wynik} przeciwników")
+print("Czy chcesz zacząć od nowa?")
