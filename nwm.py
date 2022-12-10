@@ -1,5 +1,4 @@
 from random import randint
-import sys
 
 Namew = "wilkiem"
 hp_wilk = 5
@@ -109,17 +108,17 @@ ataki =[
 def los():
     co = randint(1,7)
     if co == 1:
-        pp = wilk.copy()
+        pp = wilk
     elif co == 2:
-        pp = gnom.copy()
+        pp = gnom
     elif co == 3:
-        pp = troll.copy()
+        pp = troll
     elif co == 4:
-        pp = golem.copy()
+        pp = golem
     elif co == 7:
-        pp = smok.copy()
+        pp = smok
     elif co == 5:
-        pp = assain.copy()
+        pp = assain
     elif co == 6:
         pp = wojownik
     return pp
@@ -219,17 +218,6 @@ hp = 100
 mana = 100
 name = input("Podaj swoje imie:")
 print(F"Witaj {name}! Twoim zadaniem będzie zyskanie chwały.Good luck!")
-ataki =[
-    {
-"1 = atak w ręcz"
-    },
-    {
-"2 = atak nożem",
-    },
-    {
-"3 = iskry",
-    },
-]
 wynik = 0
 while hp > 0:
     przeciwnik = los()
@@ -250,4 +238,4 @@ while hp > 0:
 else:
     print("Zgineło ci się!")
 print(f"Pokonałeś {wynik} przeciwników")
-print("Czy chcesz zacząć od nowa?")
+
