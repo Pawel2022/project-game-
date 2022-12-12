@@ -125,8 +125,7 @@ def los():
 
 def wa():
     print(ataki)
-    for x in ataki:
-        co = int(input())
+    co = int(input())
     if co == 1:
         return ręka()
     elif co == 2:
@@ -214,20 +213,20 @@ def nagroda():
             print("Brak proni pod danym numerem. Spróbuj ponownie.")
             return 0   
     
-hp = 100
+życie = 100
 mana = 100
 name = input("Podaj swoje imie:")
 print(F"Witaj {name}! Twoim zadaniem będzie zyskanie chwały.Good luck!")
 wynik = 0
-while hp > 0:
+while życie > 0:
     przeciwnik = los()
     while przeciwnik[1] > 0:
         print(f"{name} walczy teraz z {przeciwnik[0]}")
         print(f"Przeciwnik ma {przeciwnik[1]} Hp i zadaje ci {przeciwnik[2]} obrażeń")
-        hp = hp - przeciwnik[2]
-        if hp < 0:
+        życie = życie - przeciwnik[2]
+        if życie < 0:
             break
-        print(f"Zostało ci {hp} Hp i {mana} Many")
+        print(f"Zostało ci {życie} Hp i {mana} Many")
         atak  = wa()
         przeciwnik[1] = przeciwnik[1] - atak
         print(f"Zadałeś {atak} obrażeń")
@@ -238,4 +237,3 @@ while hp > 0:
 else:
     print("Zgineło ci się!")
 print(f"Pokonałeś {wynik} przeciwników")
-
